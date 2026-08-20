@@ -1,0 +1,47 @@
+/* 画面全体を覆う親コンテナ */
+.parent-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+}
+
+/* メニューとメインを縦並びにするためのコンテナ */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* メニューコンテンツ（高さ50px固定、ボタンを横並び） */
+.menu-content {
+    height: 50px;
+    background-color: #d1e7dd;
+    border: 1px dashed #666;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+/* メインコンテンツ（残りの高さを占有） */
+.main-content {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px dashed #666;
+    padding: 10px;
+}
+
+/* ログコンテンツ（幅150px） */
+.log-content {
+    width: 150px;
+    height: 100%;
+    background-color: #e6f2ff;
+    border: 1px dashed #666;
+    padding: 10px;
+}

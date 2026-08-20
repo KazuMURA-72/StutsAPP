@@ -1,1 +1,64 @@
-<h2>あとで中身はVScodeで書く</h2>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StutsAPP</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css"></head>
+<body>
+    <div class="parent-container">
+        <!-- 左側のカラム（メニュー＋メイン） -->
+        <div class="left-column">
+            <div class="menu-content">
+                <button type="button" class="menu-btn" id="open-team-dialog-btn">TeamData</button>
+                <button type="button" class="menu-btn">GameStting</button>
+                <button type="button" class="menu-btn">InputData</button>
+                <button type="button" class="menu-btn">BoxScore</button>
+                <button type="button" class="menu-btn">Stuts</button>
+                <button type="button" class="menu-btn">ShotChart</button>
+            </div>            <div class="main-content">メインコンテンツ</div>
+        </div>
+        
+        <!-- 右側のログ -->
+        <div class="log-content">ログコンテンツ</div>
+    </div>
+    <dialog id="team-data-dialog" class="team-dialog">
+        <form method="dialog" id="team-form">
+            <h2>Team Data 登録</h2>
+            
+            <div class="form-group">
+                <label for="team-name-input">Team Name:</label>
+                <input type="text" id="team-name-input" placeholder="チーム名を入力">
+            </div>
+
+            <div class="roster-container">
+                <div class="roster-header">
+                    <span># (背番号)</span>
+                    <span>Player Name (選手名)</span>
+                    <span>操作</span>
+                </div>
+                <div id="roster-rows" class="roster-rows"></div>
+            </div>
+
+            <div class="dialog-actions-top">
+                <button type="button" id="add-player-btn" class="btn">選手追加</button>
+            </div>
+
+            <div class="dialog-actions-bottom">
+                <div class="dialog-actions-bottom">
+                    <!-- hidden属性で画面には表示させない -->
+                    <input type="file" id="file-selector" accept=".json" style="display: none;">
+                    <button type="button" id="data-load-btn" class="btn">DataLoad</button>
+                    <!-- 以下略 -->
+                </div>
+                <button type="button" id="data-save-btn" class="btn btn-primary">DataSave</button>
+                <button type="submit" id="close-dialog-btn" class="btn">閉じる</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
